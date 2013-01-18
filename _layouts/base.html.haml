@@ -4,7 +4,14 @@
     %title
       An awesome site
     %link{ :rel=>"stylesheet", :type=>"text/css", :href=>"http://static.jboss.org/theme/css/awestruct/jbossdefault_wrapper.css", :media=>"screen, projection" }
-    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/styles.css' }
-  %body.bp
-    #container
-      ~ content
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/resources/stylesheets/styles.css' }
+  %body
+    .visible-desktop
+      = remotePartial('http://static.jboss.org/theme/includes/org_header_topNav.html')
+    .navbar.navbar-static-top
+      .navbar-inner
+        .container
+          %a.brand{ :href=>"#{site.base_url}" } RichFaces
+    .container
+      .row
+        ~ content

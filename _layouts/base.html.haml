@@ -8,10 +8,26 @@
   %body
     .visible-desktop
       = remotePartial('http://static.jboss.org/theme/includes/org_header_topNav.html')
-    .navbar.navbar-static-top
-      .navbar-inner
-        .container
-          %a.brand{ :href=>"#{site.base_url}" } RichFaces
     .container
+      %div.full
+        %img{:src => "resources/images/richfaces-banner-1180px.png"}
+      .navbar.navbar-static-top.navbar-inverse.full
+        .navbar-inner
+          %ul.nav
+            %li.active
+              %a{:href => "#"} Overview
+            %li.active
+              %a{:href => "#"} Downloads
+            %li.active
+              %a{:href => "#"} Documentation
+            %li.active
+              %a{:href => "#"} Community
+            %li.active
+              %a{:href => "#"} Issue Tracker
+            %li.active
+              %a{:href => "#"} Source Code
+            %li.active
+              %a{:href => "#"} Build
       .row
-        ~ content
+        .span12
+          ~ content
